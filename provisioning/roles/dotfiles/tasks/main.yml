@@ -1,0 +1,6 @@
+---
+    - name: Pull dotfiles repo
+      git: repo=https://github.com/bradegler/dotfiles.git recursive=yes dest={{ home_dir }}/.dotfiles accept_hostkey=yes
+
+    - name: Install dotfiles
+      shell: ./.dotfiles/setup.sh chdir={{ home_dir }}

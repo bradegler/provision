@@ -1,0 +1,21 @@
+---
+    - name: install workstation packages
+      sudo: yes
+      apt: pkg={{ item }} state=latest
+      tags: [packages]
+      with_items:
+        - guake
+        - gitk
+        - synergy
+        - samba
+        - system-config-samba
+        - cifs-utils
+        - filezilla
+        - filezilla-common
+        - gimp
+        - gimp-data
+        - gimp-data-extras
+        - gnome-shell
+        - gnome-shell-extensions
+        - gdm
+        - vim-gnome
