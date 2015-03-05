@@ -10,8 +10,8 @@
 
 - name: Clone oh-my-zsh repo
   git: repo=git://github.com/robbyrussell/oh-my-zsh.git
-       dest={{ home_dir }}/.oh-my-zsh
+       dest={{ home_dir }}/.oh-my-zsh accept_hostkey=yes
 
 - name: Create a new zsh config from the template in the repo
-  command: cp /home/vagrant/.oh-my-zsh/templates/zshrc.zsh-template /home/vagrant/.zshrc
+  command: cp {{ home_dir }}/.oh-my-zsh/templates/zshrc.zsh-template {{ home_dir }}/.zshrc
 
