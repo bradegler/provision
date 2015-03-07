@@ -1,0 +1,20 @@
+---
+- name: install fish packages
+  sudo: yes
+  apt: pkg={{ item }} state=installed
+  tags: [packages]
+  with_items:
+    - fish
+
+- name: Clone oh-my-fish repo
+  git: repo=git://github.com/bpinto/oh-my-fish.git
+       dest={{ home_dir }}/.oh-my-fish accept_hostkey=yes
+
+- name: Ensure the config directory exists
+  file: state=directory path={{ home_dir }}/.config
+
+- name: Ensure the fish config directory exists
+  file: state=directory path={{ home_dir }}/.config/fish
+
+- name: Create a new fish config from the template in the repo
+  command: cp {{ home_dir }}/.oh-my-fish/templates/config.fish {{ home_dir }}/.config/fish/config.fish

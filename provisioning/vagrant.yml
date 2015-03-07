@@ -5,3 +5,7 @@
   - base
   - dotfiles
   - oh-my-zsh
+  - oh-my-fish
+
+  vars:
+    home_dir: /home/vagrant

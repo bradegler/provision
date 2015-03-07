@@ -47,7 +47,6 @@
         - cloc
         - cowsay
         - pwgen
-        - fish
 
     - name: Ensure that ansible_cache_dir directory exists
       file: path={{ ansible_cache_dir }} state=directory

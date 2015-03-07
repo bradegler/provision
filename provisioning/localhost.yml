@@ -3,3 +3,6 @@
    remote_user: begler
    roles:
    - oh-my-zsh
+
+   vars:
+      home_dir: /home/begler
