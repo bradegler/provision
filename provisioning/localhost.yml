@@ -2,7 +2,11 @@
  - hosts: localhost
    remote_user: begler
    roles:
+   - base
    - oh-my-zsh
+   - oh-my-fish
+   - dotfiles
+   - workstation
 
    vars:
       home_dir: /home/begler
