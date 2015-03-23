@@ -23,6 +23,7 @@
         - python-yaml
         - python-paramiko
         - python-jinja2
+        - python-dev
         - subversion
         - winbind
         - build-essential
